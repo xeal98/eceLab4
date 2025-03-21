@@ -16,6 +16,7 @@ Verify your signatures are what you expect, then get to work!
 
 ## Discussion Questions
 ### 1. Overall Discussion
+This discussion reviews the performance of the two models we tested, the LiteRT and Keras models. The LiteRT comes in at a significantly lower size than the Keras model which will have implications that are discussed in later sections. LiteRT makes a better model for the Raspberry Pi to run because of its smaller size, fewer pipeline stalls, and fewer misses in the cache. This makes it run substantially faster than the Keras model which makes it preferred in this case. This model is what allowed us to do live inferencing using a webcam to determine if the image was a cat or dog. 
 ### 2. Relative Model Sizes
 The keras model is roughly 10x larger than the LiteRT model. With the keras model being 27 MB and the LiteRT model being 2.4 MB. This means that the LiteRT model nearly fully fits in the 2MB of L2 CPU Cache and leads to far fewer misses (discussed later in Q4 and Q5). The LiteRT model uses optimizations like quantization or pruning of parameters to get to that smaller size. This sacrifices performance, but saves a ton of space. The performance also does not decrease that much. We saved over 10x space and lost significant, but not a ton of performance.  
 ### 3. Relative Performance for more vs. Fewer images per run, and why
