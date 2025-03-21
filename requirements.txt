@@ -1,0 +1,4 @@
+ai-edge-litert
+opencv-python
+tensorflow
+typing
