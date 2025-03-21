@@ -66,9 +66,13 @@ def main():
             img_array = image_to_np(frame_rgb)
             output = runner(catdog_input=img_array)
             result = output["output_0"][0][0]
-            cv2.imshow("Captured IMage", frame)
+            #cv2.imshow("Captured IMage", frame)
             #cv2.destroyAllWindows()
             print(result)
+            if(result > 1):
+                print("Not Cat")
+            else:
+                print("Cat")
         #print("Done with loop")    
         if cv2.waitKey(1) == ord('q'):
             webcam.release()
