@@ -15,9 +15,17 @@ After cloning,
 Verify your signatures are what you expect, then get to work!
 
 ## Discussion Questions
+1.a
+2.a
+3.a
+4.a
+5.a
 
 ## Documentation
+We used chatGPT to help us figure out how to connect a webcam. It told us to cycle through the initialization (0-9) which we did and eventually found that our webcam was floating around in the 7-10 range depending on the time. 
 
 ### People
+C1Cs Matthew Westbrook and Alex White
 
 ### LLMs
+ChatGPT usage for 
